@@ -20,23 +20,6 @@ Parse.Cloud.beforeSave("Event", function(request, response) {
     var image = new Image();
     return image.setData(response.buffer);
   }).then(function(image) {
-    // Crop the image to the smaller of width or height.
-    var minSize = Math.min(image.width(), image.height());
-    if(minSize === image.width())
-    {
-      return image.scale({
-        width: 340,
-        height: 340*image.height()/image.width()
-      });
-    }
-    else
-    {
-      return image.scale({
-        width: 560*image.width()/image.height(),
-        height: 560
-      });
-    }
-  }).then(function(image) {
     // Make sure it's a JPEG to save disk space and bandwidth.
     return image.setFormat("JPEG");
 
