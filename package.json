@@ -9,16 +9,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "express": "~4.14.x",
-    "kerberos": "~0.0.x",
-    "parse": "~1.9.2",
-    "parse-image": "^0.2.0",
-    "parse-server": "~2.2.25-beta.1"
+    "express": "*",
+    "kerberos": "*",
+    "parse": "1.11.0",
+    "parse-image": "*",
+    "parse-server": "~2.7.1"
   },
   "scripts": {
     "start": "node index.js"
   },
   "engines": {
-    "node": ">=4.3"
+    "node": ">=6.11.4"
   }
 }
